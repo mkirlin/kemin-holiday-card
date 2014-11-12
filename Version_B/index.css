@@ -1,0 +1,24 @@
+#container {
+  display: flex;
+}
+
+img {
+  height: 100%;
+  margin: auto;
+}
+
+div.holiday_message {
+	margin-top: 20%;
+	margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  font-size: 2em;
+  font-family: Garamond;
+  text-align: center;
+}
+
+.kemin_logo {
+  width: 70%;
+  padding-right: 5%;
+  margin: auto;
+}
