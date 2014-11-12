@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 function animateImages(img) {
 	// Real values: 400, 600, 400
-	$(img).fadeIn(100).delay(100).fadeOut(100, function() {
+	$(img).fadeIn(400).delay(600).fadeOut(400, function() {
 		if($(img).next().is('div')) {
 			// If the next item is a div, slow down the animation
 			animateDivs($(img).next());
@@ -39,7 +39,7 @@ function animateImages(img) {
 function animateDivs(div) {
 	// Animate the words a little slower than the images
 	// Real values: 400, 2000 (maybe tweak), 400
-	$(div).fadeIn(100).delay(100).fadeOut(100, function() {
+	$(div).fadeIn(400).delay(2000).fadeOut(400, function() {
 		// then start the image animation back up
 		if($(div).next().is('img')) {
 			animateImages($(div).next());
