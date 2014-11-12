@@ -21,25 +21,25 @@ function animateImages(img) {
 
 	switch(classColor) {
     case "red":
-      backgroundColor = "#dc291e"
+      backgroundColor = "rgb(229,29,27)"
       break;
     case "yellow":
-      backgroundColor = "#ffc82e"
+      backgroundColor = "rgb(254,197,36)"
       break;
     case "orange":
-      backgroundColor = "#ff6418"
+      backgroundColor = "rgb(252,103,25)"
       break;
     case "light_blue":
-      backgroundColor = "#2c95b5"
+      backgroundColor = "rgb(58,151,181)"
       break;
     case "dark_blue":
-      backgroundColor = "#293e6b"
+      backgroundColor = "rgb(26,53,94)"
       break;
     case "green":
-      backgroundColor = "#3d9b35"
+      backgroundColor = "rgb(76,157,42)"
       break;
     case "gray":
-      backgroundColor = "gray"
+      backgroundColor = "rgb(139,138,143)"
       break;
     default:
       backgroundColor = white
