@@ -2,9 +2,9 @@ $(document).ready(function() {
 	// On window resize, reload
 	window.onresize = function(){ location.reload(); }
 
-	// var vid = document.getElementById("holiday_music");
-	// vid.autoplay = true;
-	// vid.loop = true;
+	var vid = document.getElementById("holiday_music");
+	vid.autoplay = true;
+	vid.loop = true;
 
 	$(".kemin_logo").hide();
 	$(".holiday_message").hide();
