@@ -1,9 +1,9 @@
 $(document).ready(function() {
 	// window.onresize = function(){ location.reload(); }
 
-	// var holiday_music = document.getElementById("holiday_music");
-	// holiday_music.autoplay = true;
-	// holiday_music.loop = true;
+	var holiday_music = document.getElementById("holiday_music");
+	holiday_music.autoplay = true;
+	holiday_music.loop = true;
 	
 	$(".holiday_image").hide();
 	$(".holiday_message").hide();
