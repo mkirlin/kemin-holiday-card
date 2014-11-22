@@ -36,3 +36,4 @@ function animateImages(img) {
 // If array is empty, fade in final logo
 // If everything is loaded, wait a beat, then fade out everything and show the message
 // If you've shown the message, wait a few seconds and then show the logo
+// Start music right before animations, end music shortly after Kemin logo
