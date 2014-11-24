@@ -1,10 +1,8 @@
 .holiday_image {
-	width: 15%;
-	height: 100px;
-	display: inline-block;
-	border: 2px solid black;
 }
 
-img {
-	/*max-width: 100%*/
+div>img {
+  display: inline;
+  width: 90%;
+  margin: 9%;
 }
