@@ -1,19 +1,22 @@
 $(document).ready(function() {
+	// Play music on page load
+	var holiday_music = document.getElementById("holiday_music");
+	holiday_music.autoplay = true;
+	holiday_music.loop = true;
+
 	// All items on page are hidden
 	$(".holiday_image").hide();
 	$(".logo").hide();
 	$(".holiday_message").hide();
-	// $(".big_logo").show();
 
 	// Load images into an array when they arrive on the page
-
 	imageArray = [];
 	$(".holiday_image").each(function(index) {
 		imageArray.push($(this).attr('id'))
 	});
 
-	fadeInImages();
-
+	// Delay images until after music starts
+	var delayedStart = setInterval(function() {fadeInImages()}, 1000);
 });
 
 function fadeInImages() {
@@ -36,12 +39,13 @@ function fadeInImages() {
 			});
 		});
 	};
-}
+};
 
 function fadeInMessageAndLogo() {
 	// Once you've shown the message, wait a few seconds and then show the logo
 	$(".holiday_message").fadeIn(300).delay(5000).fadeOut(300, function() {
 		$(".holiday_message").remove();
+		$("#small_logo").remove();
 		$(".big_logo").fadeIn(300);
 	});
-}
+};
