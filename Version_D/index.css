@@ -9,14 +9,16 @@ div>img {
 	margin-left: auto;
   margin-right: auto;
   width: 70%;
-  font-size: 6em;
+  font-size: 6vw;
   font-family: Garamond;
   text-align: center;
   color: red;
+  font-weight: 900;
 }
 
 .big_logo {
   height: 90vh;
-  width: 90vw;
+  width: 80vw;
   margin: auto;
+  padding-left: 20%;
 }
