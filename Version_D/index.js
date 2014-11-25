@@ -49,3 +49,5 @@ function fadeInMessageAndLogo() {
 		$(".big_logo").fadeIn(300);
 	});
 };
+
+// TODO: change hide/show to an opacity-based design to smooth out fade in and out
