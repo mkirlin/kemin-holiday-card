@@ -2,10 +2,9 @@ $(document).ready(function() {
 	// Play music on page load
 	var holiday_music = document.getElementById("holiday_music");
 	holiday_music.autoplay = true;
-	holiday_music.loop = true;
 
 	// All items on page are hidden
-	$(".holiday_image").hide();
+	$(".holiday_image").css("opacity", 0)
 	$(".logo").hide();
 	$(".holiday_message").hide();
 
@@ -16,7 +15,9 @@ $(document).ready(function() {
 	});
 
 	// Delay images until after music starts
-	var delayedStart = setInterval(function() {fadeInImages()}, 1000);
+	var delayedStart = setInterval(function() {fadeInImages()}, 1500);
+
+
 });
 
 function fadeInImages() {
@@ -26,16 +27,14 @@ function fadeInImages() {
 		var randomIndex = Math.floor((Math.random() * imageArray.length));
 		var imageToFadeIn = imageArray[randomIndex];
 		imageArray.splice(randomIndex, 1);
-		$("#"+imageToFadeIn).fadeIn(600, function() {
+		$("#"+imageToFadeIn).fadeTo("slow", 1, function() {
 			fadeInImages();
 		});
 	} else {
 		$("#small_logo").fadeIn(600, function() {
-			$("#small_logo").delay(2000).fadeOut(300, function() {
-				$(".holiday_image").fadeOut(300, function() {
-					// If everything is loaded, wait a beat, then fade out everything and show the message
-					fadeInMessageAndLogo();
-				});
+			$(".block").delay(2000).fadeOut(300, function() {
+				// If everything is loaded, wait a beat, then fade out everything and show the message
+				fadeInMessageAndLogo();
 			});
 		});
 	};
@@ -46,8 +45,8 @@ function fadeInMessageAndLogo() {
 	$(".holiday_message").fadeIn(300).delay(5000).fadeOut(300, function() {
 		$(".holiday_message").remove();
 		$("#small_logo").remove();
-		$(".big_logo").fadeIn(300);
+		$(".big_logo").fadeIn(300, function() {
+			// setInterval(function() {$('#holiday_music').remove()}, 7000);
+		});
 	});
 };
-
-// TODO: change hide/show to an opacity-based design to smooth out fade in and out
