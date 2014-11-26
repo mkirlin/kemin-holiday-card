@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	// Play music on page load
-	var holiday_music = document.getElementById("holiday_music");
+	holiday_music = document.getElementById("holiday_music");
 	holiday_music.autoplay = true;
 
 	// All items on page are hidden
@@ -46,7 +46,9 @@ function fadeInMessageAndLogo() {
 		$(".holiday_message").remove();
 		$("#small_logo").remove();
 		$(".big_logo").fadeIn(300, function() {
-			// setInterval(function() {$('#holiday_music').remove()}, 7000);
+			setInterval(function() {
+				$('#holiday_music').animate({volume: 0.0}, 6000)
+			}, 5000);
 		});
 	});
 };
