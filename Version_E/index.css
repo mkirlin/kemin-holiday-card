@@ -1,0 +1,24 @@
+div.block>img {
+  display: inline;
+  width: 90%;
+  margin: 9%;
+}
+
+.holiday_message {
+	margin-top: 15%;
+	margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  font-size: 6vw;
+  font-family: Garamond;
+  text-align: center;
+  color: red;
+  font-weight: 900;
+}
+
+.big_logo {
+  max-height: 90vh;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%
+}
