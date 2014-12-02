@@ -1,7 +1,12 @@
 $(document).ready(function() {
 	// Play music on page load
-	holiday_music = document.getElementById("holiday_music");
-	holiday_music.autoplay = true;
+	lowLag.init({"urlPrefix":"assets/", "audioTagTimeToLive":65000});
+	lowLag.load(["holiday_music.mp3","holiday_music.ogg"],"holiday_music");
+	lowLag.play("holiday_music");
+
+	// lowLag.init();
+	// lowLag.load("assets/holiday_music.mp3");
+	// lowLag.play("assets/holiday_music.mp3");
 
 	// All items on page are hidden
 	$(".holiday_image").css("opacity", 0)
@@ -47,7 +52,7 @@ function fadeInMessageAndLogo() {
 		$("#small_logo").remove();
 		$(".big_logo").fadeIn(300, function() {
 			setInterval(function() {
-				$('#holiday_music').animate({volume: 0.0}, 6000)
+				$('#lowLag').animate({volume: 0.0}, 6000)
 			}, 5000);
 		});
 	});
