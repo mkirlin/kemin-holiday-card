@@ -4,10 +4,6 @@ $(document).ready(function() {
 	lowLag.load(["holiday_music.mp3","holiday_music.ogg"],"holiday_music");
 	lowLag.play("holiday_music");
 
-	// lowLag.init();
-	// lowLag.load("assets/holiday_music.mp3");
-	// lowLag.play("assets/holiday_music.mp3");
-
 	// All items on page are hidden
 	$(".holiday_image").css("opacity", 0)
 	$(".logo").hide();
@@ -20,7 +16,7 @@ $(document).ready(function() {
 	});
 
 	// Delay images until after music starts
-	var delayedStart = setInterval(function() {fadeInImages()}, 1500);
+	var delayedStart = setInterval(function() {fadeInImages()}, 1800);
 
 
 });
